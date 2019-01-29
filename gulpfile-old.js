@@ -21,12 +21,12 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     sort = require('gulp-sort');
 
-var lessAutoprefix = new LessAutoprefix({
-    browsers: ['last 2 versions']
-});
-var imagemin = require('gulp-imagemin'),
-    imageminPngquant = require('imagemin-pngquant'),
-    imageminJpegcompress = require('imagemin-jpeg-recompress');
+    var lessAutoprefix = new LessAutoprefix({
+        browsers: ['last 2 versions']
+    });
+    var imagemin = require('gulp-imagemin'),
+        imageminPngquant = require('imagemin-pngquant'),
+        imageminJpegcompress = require('imagemin-jpeg-recompress');
 
 
 // File paths
@@ -39,21 +39,18 @@ var imagemin = require('gulp-imagemin'),
     scriptSrc = 'source/js/!*.js',
     scriptDest = 'build/assets/js/';*/
 const
-    STYLESRC =  './src/assets/styles/',
-    STYLEDEST = './build/css/',
-    HTMLSRC =   './src/**/*.html',
-    HTMLDEST = './build/',
-    BCOMPONENTS = './components/**',
-
-    VENDSRC = './src/assets/vendors/**',
-    VENDDEST = './build/assets/vendors/',
-
-    SCRIPTSRC = './src/assets/js/!*.js',
-    SCRIPTDEST = './build/assets/js/',
-
-    IMAGESSRC = './src/assets/images/**/*.{png,jpeg,jpg,svg,gif}',
-    IMAGESDEST = './build/assets/images/'
+    STYLESRC =  'src/styles/',
+    STYLEDEST = 'build/css/',
+    HTMLSRC =   'src/**/*.html',
+    HTMLDEST = 'build/',
+    VENDSRC = 'components/',
+    VENDDEST = 'build/js/vendors/',
+    SCRIPTSRC = 'src/js/!*.js',
+    SCRIPTDEST = 'build/js/',
+    IMAGESSRC = 'src/images/**/*.{png,jpeg,jpg,svg,gif}',
+    IMAGESDEST = 'build/images/'
 ;
+
 
 gulp.task('sync', function () {
     browserSync.init({
@@ -65,11 +62,10 @@ gulp.task('sync', function () {
 
 
 // var vendorStream = gulp.src(['./src/components/*.js'], {read: false});
-// var vendStream = gulp.src(mainBowerFiles(), { base: VENDSRC });
-
-    // scriptAppStream = gulp.src([SCRIPTSRC], {read: false}),
-    // stylesVendStream = gulp.src(mainBowerFiles(['**/*.css']), { base: VENDDEST }),
-    // stylesAppStream = gulp.src([STYLESRC], {read: false});
+var scriptVendStream = gulp.src(mainBowerFiles(['**/*.js']), { base: VENDDEST }),
+    scriptAppStream = gulp.src([SCRIPTSRC], {read: false}),
+    stylesVendStream = gulp.src(mainBowerFiles(['**/*.css']), { base: VENDDEST }),
+    stylesAppStream = gulp.src([STYLESRC], {read: false});
 
 
 gulp.task('css', function () {
@@ -123,62 +119,19 @@ gulp.task('css', function () {
 
 gulp.task('js', function () {
     console.log('starting js task');
-    return gulp.src(SCRIPTSRC)
+
+    return gulp.src(mainBowerFiles(), { base: VENDSRC })
         .pipe(sort())
         .pipe(plumber(function (err) {
             console.log('Scripts Task Error');
             console.log(err);
             this.emit('end');
         }))
-        .pipe(concat('main.js'))
+        .pipe(concat('vends.js'))
         .pipe(gulp.dest(SCRIPTDEST))
         .pipe(sourcemaps.write());
 });
 
-/*===============================
-* VENDOR CODES
-*--------------------------------*/
-//Maak een kopie van alle essentieële bower files uit het originele "components" mapje.
-//Zet deze bestanden dan in de src
-gulp.task('createvendorsrc', function () {
-    console.log('copy vendor files from main BOWER folder into src folder');
-    return gulp.src(mainBowerFiles(), { base: BCOMPONENTS })
-        .pipe(sort())
-        .pipe(plumber(function (err) {
-            console.log('Scripts Task Error');
-            console.log(err);
-            this.emit('end');
-        }))
-        .pipe(gulp.dest(VENDSRC));
-});
-
-//Maak (nog) een kopie van alle (essentieële) bower files.
-// Zet deze dit keer in het build mapje
-gulp.task('buildvendordist', function () {
-    console.log('copy vendor files from src folder into build folder');
-    return gulp.src(VENDSRC)
-        .pipe(sort())
-        .pipe(plumber(function (err) {
-            console.log('Scripts Task Error');
-            console.log(err);
-            this.emit('end');
-        }))
-        .pipe(gulp.dest(VENDDEST));
-});
-// Injecteer alle vendor bestanden in de index.html file
-gulp.task('inject', function () {
-    return gulp.src('src/index.html')
-        .pipe(plumber(function (err) {
-            console.log('Inject error');
-            console.log(err);
-            this.emit('end');
-        }))
-        .pipe(inject((gulp.src(VENDSRC)),{ignorePath: 'src'})) // This will always inject vendor files before app files
-        .pipe(gulp.dest('src/'));
-});
-
-
-gulp.task('makevendors', gulp.series('createvendorsrc', 'buildvendordist','inject'));
 
 
 
@@ -209,22 +162,20 @@ gulp.task('images', function () {
 // });
 
 
+gulp.task('inject', function () {
+    // console.log(mainBowerFiles(), { base: VENDSRC });
+    scriptVendStream = gulp.src(mainBowerFiles(), { base: VENDSRC });
 
-gulp.task('bower', function() {
-    return gulp.src('src/**/*.html')
-        .pipe(htmlBower({
-            basedir: 'src/assets',
-            prefix: 'components',
-        }))
-        .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest('build'));
+    // console.log(mainBowerFiles(['**/*.css']), { base: VENDDEST });
+    return gulp.src('src/index.html')
+        .pipe(inject(series(scriptVendStream, scriptAppStream, stylesVendStream, stylesAppStream))) // This will always inject vendor files before app files
+        .pipe(gulp.dest('src/'));
 });
 
 
 gulp.task('watch', function(){
-    gulp.watch("src/**/*.html", gulp.parallel('bower')).on("change", browserSync.reload);
-    gulp.watch("src/assets/**/*.less", gulp.parallel('css')).on("change", browserSync.reload);
-    gulp.watch("src/assets/**/*.js", gulp.parallel('js')).on("change", browserSync.reload);
+    gulp.watch("src/**/*.less", gulp.parallel('css')).on("change", browserSync.reload);
+    gulp.watch("src/**/*.js", gulp.parallel('js')).on("change", browserSync.reload);
 });
 
 gulp.task('default', gulp.parallel('watch', 'sync','images'));

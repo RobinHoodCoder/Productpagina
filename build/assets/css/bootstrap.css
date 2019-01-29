@@ -303,7 +303,7 @@ header {
 nav {
   padding: 10px 0;
   box-sizing: border-box;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 nav .logo img {
   width: 288px;
@@ -331,5 +331,41 @@ nav ul .login-btn {
 nav ul .shopping-cart {
   margin: 0;
 }
+.breadcrumbs {
+  margin: 10px 0;
+  list-style: none;
+  overflow: hidden;
+  font-size: 1.3em;
+  font-weight: 400;
+}
+.breadcrumbs ul {
+  padding: 0;
+}
+.breadcrumbs li {
+  float: left;
+  list-style: none;
+  padding: 0;
+}
+.breadcrumbs li a {
+  color: black;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  float: left;
+  padding: 10px 20px 10px 0;
+}
+.breadcrumbs li a span:after {
+  margin-left: 10px;
+  color: black;
+  content: '>';
+  display: inline-block;
+}
+.breadcrumbs li strong {
+  padding: 10px 20px 10px 0;
+  display: block;
+}
 /*4. Modules -- Styling van additionele onderdelen*/
 /* 5. Templates -- Styling van pagina-specifieke elementen*/
+main.product-detail {
+  margin-top: 30px;
+}
