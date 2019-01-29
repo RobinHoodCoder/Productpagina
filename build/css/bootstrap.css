@@ -268,6 +268,7 @@ template {
 .wrapper {
   width: 100%;
   max-width: 1200px;
+  margin: 0 auto;
 }
 .absolute {
   position: absolute;
@@ -296,21 +297,39 @@ template {
   clear: both;
 }
 /* 3. Layout -- Styling van de grotere onderdelen */
-.logo {
-  width: 100px;
+header {
+  box-shadow: 0px 24px 30px -31px rgba(0, 0, 0, 0.75);
+}
+nav {
+  padding: 10px 0;
+  box-sizing: border-box;
+  font-size: 1.2em;
+}
+nav .logo img {
+  width: 288px;
+  display: block;
 }
 nav ul {
   margin: 0;
   padding: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
 }
 nav ul li {
   margin: 0;
   list-style: none;
-  display: inline-block;
 }
 nav ul li a {
   color: #0090e3;
-  margin: 0 10px 0;
+}
+nav ul .login-btn {
+  margin-left: auto;
+  margin-right: 10px;
+}
+nav ul .shopping-cart {
+  margin: 0;
 }
 /*4. Modules -- Styling van additionele onderdelen*/
 /* 5. Templates -- Styling van pagina-specifieke elementen*/

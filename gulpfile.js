@@ -20,9 +20,6 @@ var gulp = require('gulp'),
         imageminJpegcompress = require('imagemin-jpeg-recompress');
 
 
-
-
-
 // File paths
 var DIST_PATH =    './build/';
 var SCRIPTS_PATH = './src/scripts/**/*.js';
