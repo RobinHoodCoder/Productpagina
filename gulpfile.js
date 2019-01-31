@@ -19,7 +19,9 @@ var gulp = require('gulp'),
     inject = require('gulp-inject')
     mainBowerFiles = require('main-bower-files'),
     concat = require('gulp-concat'),
-    sort = require('gulp-sort');
+    sort = require('gulp-sort'),
+    browserify = require('browserify');
+const babel = require('gulp-babel');
 
 var lessAutoprefix = new LessAutoprefix({
     browsers: ['last 2 versions']
@@ -27,6 +29,10 @@ var lessAutoprefix = new LessAutoprefix({
 var imagemin = require('gulp-imagemin'),
     imageminPngquant = require('imagemin-pngquant'),
     imageminJpegcompress = require('imagemin-jpeg-recompress');
+
+
+
+
 
 
 // File paths
@@ -40,7 +46,7 @@ var imagemin = require('gulp-imagemin'),
     scriptDest = 'build/assets/js/';*/
 const
     STYLESRC =  './src/assets/styles/',
-    STYLEDEST = './build/css/',
+    STYLEDEST = './build/assets/css/',
     HTMLSRC =   './src/**/*.html',
     HTMLDEST = './build/',
     BCOMPONENTS = './components/**',
@@ -48,12 +54,14 @@ const
     VENDSRC = './src/assets/vendors/**',
     VENDDEST = './build/assets/vendors/',
 
-    SCRIPTSRC = './src/assets/js/!*.js',
-    SCRIPTDEST = './build/assets/js/',
+    SCRIPTSRC  = './src/assets/js/**.js',
+    SCRIPTSRCF = './src/assets/js/.js',
+
+
+    SCRIPTDEST = 'build/assets/js/',
 
     IMAGESSRC = './src/assets/images/**/*.{png,jpeg,jpg,svg,gif}',
-    IMAGESDEST = './build/assets/images/'
-;
+    IMAGESDEST = './build/assets/images/';
 
 gulp.task('sync', function () {
     browserSync.init({
@@ -85,7 +93,7 @@ gulp.task('css', function () {
             plugins: [lessAutoprefix]
         }))
         .pipe(gulp.dest(STYLEDEST))
-        .pipe(browserSync.stream());
+        // .pipe(browserSync.stream());
 
 
 });
@@ -98,33 +106,32 @@ gulp.task('css', function () {
 //         }))
 //         .pipe(gulp.dest(SCRIPTDEST));
 // });
-// gulp.task('js', function () {
-//     console.log('starting scripts task');
-//
-//     return gulp.src(SCRIPTSRC)
-//         .pipe(plumber(function (err) {
-//             console.log('Scripts Task Error');
-//             console.log(err);
-//             this.emit('end');
-//         }))
-//         .pipe(sourcemaps.init())
-//         // .pipe(babel({
-//         //     presets: ['es2015']
-//         // }))
-//         // .pipe(uglify())
-//         .pipe(jsmin())
-//         // .pipe(concat('scripts.js'))
-//         .pipe(rename({
-//              suffix: '.min'
-//          }))
-//         .pipe(sourcemaps.write())
-//         .pipe(gulp.dest(SCRIPTDEST));
-// });
-
 gulp.task('js', function () {
+    console.log('starting scripts task');
+
+    return gulp.src(SCRIPTSRC)
+        .pipe(plumber(function (err) {
+            console.log('Scripts Task Error');
+            console.log(err);
+            this.emit('end');
+        }))
+        .pipe(sourcemaps.init())
+        .pipe(babel({
+            minified: true,
+            presets: ['es2015']
+        }))
+        .pipe(concat('scripts.js'))
+        .pipe(rename({
+             suffix: '.min'
+         }))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(SCRIPTDEST));
+});
+
+/*gulp.task('js', function () {
     console.log('starting js task');
     return gulp.src(SCRIPTSRC)
-        .pipe(sort())
+        // .pipe(sort())
         .pipe(plumber(function (err) {
             console.log('Scripts Task Error');
             console.log(err);
@@ -133,7 +140,7 @@ gulp.task('js', function () {
         .pipe(concat('main.js'))
         .pipe(gulp.dest(SCRIPTDEST))
         .pipe(sourcemaps.write());
-});
+});*/
 
 /*===============================
 * VENDOR CODES
@@ -156,7 +163,11 @@ gulp.task('createvendorsrc', function () {
 // Zet deze dit keer in het build mapje
 gulp.task('buildvendordist', function () {
     console.log('copy vendor files from src folder into build folder');
+
+
+
     return gulp.src(VENDSRC)
+
         .pipe(sort())
         .pipe(plumber(function (err) {
             console.log('Scripts Task Error');

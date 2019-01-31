@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Productpagina</title>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/assets/vendors/photoswipe/dist/photoswipe.css">
+    <link rel="stylesheet" href="/assets/vendors/photoswipe/dist/default-skin/default-skin.css">
+    <link rel="stylesheet" href="/assets/vendors/swiper/dist/css/swiper.css">
+    <!-- endinject -->
     <!-- inject:js -->
 
+
     <script src="/assets/vendors/jquery/dist/jquery.js"></script>
+
 
     <script src="/assets/vendors/photoswipe/dist/photoswipe-ui-default.js"></script>
 
     <script src="/assets/vendors/photoswipe/dist/photoswipe.js"></script>
 
+    <script src="/assets/vendors/swiper/dist/js/swiper.js"></script>
     <!-- endinject -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="/assets/vendors/photoswipe/dist/photoswipe.css">
-    <link rel="stylesheet" href="/assets/vendors/photoswipe/dist/default-skin/default-skin.css">
-    <!-- endinject -->
+    <script src="/assets/js/scripts.min.js"></script>
 
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
 
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
 </head>
 <body>
     <header>
@@ -58,13 +63,52 @@
     <main class="product-detail">
         <div class="wrapper">
             <h1>Lenovo Yoga 530-14IKB 81EK00HWMH (zwart)</h1>
-            <div class="left-col-main">
-                <div class="lightbox">
+            <div class="main-cols">
+                <div class="col product-info">
+                    <div class="lightbox">
+                        <!-- Slider main container -->
+                        <div class="swiper-container gallery-top">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/1/)"></div>
+                                <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/2/)"></div>
+                                <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/3/)"></div>
+                                <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/4/)"></div>
+                                <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/5/)"></div>
+                                <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/6/)"></div>
+                                <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/7/)"></div>
+                                <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/8/)"></div>
+                                <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/9/)"></div>
+                                <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/10/)"></div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next swiper-button-white"></div>
+                            <div class="swiper-button-prev swiper-button-white"></div>
+                        </div>
+                        <div class="swiper-container gallery-thumbs">
+                            <div class="swiper-wrapper">
 
+                                <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/1/)"></div>
+                                <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/2/)"></div>
+                                <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/3/)"></div>
+                                <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/4/)"></div>
+                                <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/5/)"></div>
+                                <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/6/)"></div>
+                                <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/7/)"></div>
+                                <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/8/)"></div>
+                                <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/9/)"></div>
+                                <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/10/)"></div>
+                            </div>
+                        </div>
+
+
+                    </div>
                 </div>
-            </div>
-            <div class="right-col-main">
-
+                <div class="col shopping-controls">
+                    <span class="initial-price">499,-</span>
+                    <span class="base-price">399,-</span>
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="cleared"></div>
             </div>
         </div>
     </main>
