@@ -1,0 +1,53 @@
+.price-box{
+  font-weight: 400;
+  margin-bottom: 20px;
+  .prices{
+    font-size: 1.7em;
+    span{
+      display: block;
+      line-height: 100%;
+    }
+  }
+  .delivery-usp{
+    margin-top: 45px;
+    margin-left: 10px;
+    font-size: 1.3em;
+    &.available{
+      color: @green-normal;
+    }
+    &.unavailable{
+      color: @orange;
+    }
+  }
+}
+.purchase-button{
+  font-size: 1.7em;
+  color: #fff;
+  background: @green-bright;
+  width: 100%;
+  padding: 25px 10px;
+  border-radius: 10px;
+}
+ul.usp-list{
+  font-size: 1.1em;
+  color: @font-color-light;
+  font-weight: 400;
+  margin: 25px 0;
+  font-family: @font-family-content;
+  li{
+    margin-bottom: 16px;
+    position: relative;
+    padding-left: 34px;
+    &:before{
+      position: absolute;
+      display: inline-block;
+      top: 50%;
+      left:0;
+      transform: translateY(-50%);
+      content:'';
+      width: 22px;
+      height: 22px;
+      background: url("../images/check-circle-blue.svg") no-repeat center center;
+    }
+  }
+}

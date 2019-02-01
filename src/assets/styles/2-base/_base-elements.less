@@ -1,9 +1,21 @@
+body{
+
+}
 .wrapper{
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 .absolute{position: absolute;margin:auto;}
+
+.a-center{
+  .absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
 .a-vertical-center{
   .absolute;
   top:0;
@@ -14,6 +26,47 @@
   left:0;
   right:0;
 }
+.div{
+  display: block;
+}
 .left-floated{float: left;}
 .right-floated{float: right;}
 .cleared,.clear{clear:both;}
+
+
+ul{
+  li{
+    margin-bottom: 7px;
+  }
+}
+.status-message{
+  margin-top:20px;
+  display: block;
+  font-weight: 400;
+  font-family: @font-family-content;
+  position: relative;
+  padding-left: 35px;
+  font-size: 1.1em;
+  &:before{
+    position: absolute;
+    left:0;
+    top:50%;
+    transform: translateY(-50%);
+  }
+  &.warning{
+    color: @orange;
+    &:before{
+      display: inline-block;
+      content: url("../images/exclamation-triangle-orange.svg");
+      margin-right: 7px;
+    }
+  }
+}
+span.price{
+  color: @font-color-base;
+  &.initial-price{
+    opacity: 0.5;
+    text-decoration: line-through;
+    margin-bottom: 16px;
+  }
+}

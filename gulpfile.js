@@ -82,20 +82,15 @@ gulp.task('sync', function () {
 
 gulp.task('css', function () {
     console.log('starting styles task');
-    return gulp.src(STYLESRC+'bootstrap.less')
+    return gulp.src(STYLESRC+'bootstrap.less',{sourcemaps: true})
         .pipe(plumber(function (err) {
             console.log('Styles Task Error');
             console.log(err);
-            // this.emit('end');
         }))
-        .pipe(sourcemaps.init())
         .pipe(less({
-            plugins: [lessAutoprefix]
+            // plugins: [lessAutoprefix]
         }))
         .pipe(gulp.dest(STYLEDEST))
-        // .pipe(browserSync.stream());
-
-
 });
 
 // gulp.task('js', function () {

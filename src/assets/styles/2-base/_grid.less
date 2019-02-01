@@ -1,11 +1,24 @@
+@gutter: 40px;
+
 .main-cols{
+  margin-top:30px;
   .col{
-    float:left;
-    &.shopping-controls{
-      width: 40%;
+    &.col-product-detail-info{
+      @media @desktop{
+        float:left;
+        width: 50%;
+        margin-right: -@gutter;
+        padding-right: @gutter;
+      }
     }
-    &.product-info{
-      width: 60%;
+    &.col-product-detail-order{
+      @media @desktop{
+        float:left;
+        margin-left: @gutter;
+        padding-right: -@gutter;
+        width: 50%;
+      }
     }
+
   }
 }

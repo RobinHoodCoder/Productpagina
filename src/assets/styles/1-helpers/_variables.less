@@ -1,22 +1,41 @@
 /*
 Color Variables
 */
-@blue: #0090e3;
+
+//Color palette
+@blue:   #0090e3;
+@orange: #ff9000;
+@green-normal:  #0e9214;
+@green-bright:  #20c728;
+
+
+//Theme colors
+@cta-color-main:  @green-normal;
+@cta-color-extra: @green-bright;
+
+@theme-color-main:  @blue;
+@theme-color-extra: @orange;
 
 /*************
 Font Variables
 */////////////
 
 @font-family-base: 'Oswald', sans-serif;
+@font-family-content: 'Roboto Condensed', sans-serif;
 @font-family-monospace: "Lucida Console", Monaco, monospace;
-@font-size-base: 14px;
-@font-weight-base: 500;
 @line-height-base: 100%;
+
+@font-size-base: 100%;
+@font-weight-base: 400;
+@line-height-base: 100%;
+
+@font-color-base: #000;
+@font-color-light: #707070;
 
 /*
 Color theme
 */
-@body-color: #000;
+@body-color: @font-color-base;
 @body-bg :#fff;
 
 /*
@@ -24,7 +43,13 @@ Spacings
 */
 @headings-margin-bottom: 10px;
 @paragraph-margin-bottom: 5px;
-@link-color: @blue;
+
+/*
+Application of theme colors to elements
+*/
+
+@link-color: @theme-color-main;
+@border-color: #a2a2a2;
 @link-decoration: none;
 
 @label-margin-bottom: 5px;

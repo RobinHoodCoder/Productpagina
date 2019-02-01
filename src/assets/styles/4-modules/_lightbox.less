@@ -1,6 +1,6 @@
 .lightbox{
   position: relative;
-  margin: 30px 0;
+  margin-bottom: 20px;
   //height: 510px;
 }
 .swiper-container {
@@ -12,8 +12,13 @@
 .swiper-slide {
   background-size: cover;
   background-position: center;
+  padding: 20px;
+  img{
+    .a-center;
+  }
 }
 .gallery-top {
+  box-shadow: 0px 9px 29px 0px rgba(35, 31, 32, 0.19);
   height: 350px;
   width: 100%;
 }
@@ -26,9 +31,21 @@
   width: 25%;
   height: 100%;
   opacity: 0.4;
+  border: 1px solid @font-color-light;
+  img{
+    .a-center;
+    height: 100%;
+  }
 }
 .gallery-thumbs .swiper-slide-thumb-active {
   opacity: 1;
 }
+.swiper-button-blue{
 
-  
+}
+.swiper-button-next{
+  background: url("../images/swipe-arrow-right.svg");
+}
+.swiper-button-prev{
+  background: url("../images/swipe-arrow-left.svg");
+}
