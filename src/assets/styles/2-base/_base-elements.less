@@ -2,7 +2,10 @@ body{
 
 }
 .wrapper{
-  width: 100%;
+  width:  calc(~'100% - 20px');
+ @media @desktop{
+   width: 100%;
+ }
   max-width: 1200px;
   margin: 0 auto;
 }

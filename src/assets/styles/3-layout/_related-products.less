@@ -1,10 +1,22 @@
 .related-products-box{
+
+  .related-products-list{
+    font-size: 1.2em;
+    @media @tablet{
+      display: flex;
+      justify-content: space-between;
+    }
+    @media @desktop{
+      display: flex;
+      justify-content: space-between;
+    }
+
+  }
   li{
     @media @desktop{
-      width:50%;
     }
   }
-  font-size: 1.2em;
+
   a{
     display: flex;
     align-items: center;
@@ -21,6 +33,6 @@
     float: left;
     display: block;
     max-width: 90px;
-    margin-right: 10px;
+    margin-right: 20px;
   }
 }

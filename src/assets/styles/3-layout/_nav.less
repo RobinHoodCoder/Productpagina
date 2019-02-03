@@ -2,12 +2,16 @@ header{
   box-shadow: 0px 24px 30px -31px rgba(0,0,0,0.75);
 }
 nav{
-  padding: 10px 0;
+
   box-sizing: border-box;
   font-size: 1.3em;
+  padding: 10px 0;
   .logo{
     img{
-      width: 288px;
+      width: 200px;
+      @media @desktop{
+        width: 250px;
+      }
       display: block;
     }
   }
@@ -36,8 +40,11 @@ nav{
   margin: 10px 0;
   list-style: none;
   overflow: hidden;
-  font-size: 1.3em;
   font-weight: 400;
+  font-size: 1.2em;
+  @media @desktop{
+    font-size: 1.3em;
+  }
   ul{
     padding:0;
   }
@@ -50,10 +57,9 @@ nav{
       color: black;
       text-decoration: none;
       position: relative;
-
       display: block;
       float: left;
-      padding: 10px 20px 10px 0;
+      padding: 10px 10px 10px 0;
       span{
         &:after{
           margin-left: 10px;
