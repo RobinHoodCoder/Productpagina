@@ -1,9 +1,17 @@
-@gutter: 40px;
+@gutter: 30px;
 
 .main-cols{
   margin-top:30px;
   .col{
     &.col-product-detail-images{
+
+      @media @tablet{
+        @gutter: 10px;
+        float:left;
+        width: 50%;
+        margin-right: -@gutter;
+        padding-right: @gutter;
+      }
       @media @desktop{
         float:left;
         width: 50%;
@@ -12,6 +20,12 @@
       }
     }
     &.col-product-detail-order{
+      @media @tablet{ float:left;
+        @gutter: 10px;
+        width: 50%;
+        margin-left: @gutter;
+        padding-right: -@gutter;
+      }
       @media @desktop{
         float:left;
         margin-left: @gutter;

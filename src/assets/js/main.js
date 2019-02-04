@@ -52,6 +52,7 @@ function loadJSON(callback) {
 
 
 
+
     function jsonInit() {
         loadJSON(function(response) {
             // Parse JSON string into object
