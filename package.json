@@ -1,8 +1,8 @@
 {
   "name": "gulp-website",
   "version": "1.0.0",
-  "description": "A basic gulp example",
-  "main": "templates/layouts/_header.php",
+  "description": "Proudct detail pagina",
+  "main": "src/index.js",
   "scripts": {
     "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"

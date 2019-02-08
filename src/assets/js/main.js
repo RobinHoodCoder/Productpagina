@@ -13,13 +13,14 @@ function loadJSON(callback) {
     xobj.send(null);
 
 }
+
 ($(function() {
     // console.log(this);
 
 
     var galleryThumbs = new Swiper(".gallery-thumbs", {
         spaceBetween: 14,
-        slidesPerView: 4,
+        slidesPerView: 3,
         freeMode: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
@@ -36,6 +37,7 @@ function loadJSON(callback) {
     });
 
     // Gallery
+
 
     var $pswp = $(".pswp")[0];
     var image = [];
@@ -141,8 +143,6 @@ function loadJSON(callback) {
 
 
 
-
-
             $.each(products, function(key, value) {
                 // console.log(key);
                 if(value === dynamicElements.name){
@@ -154,33 +154,14 @@ function loadJSON(callback) {
 
 
 
+
             });
 
         });
 
     }
     // jsonInit();
-
-
-
-
-
-
-
-
-
-
-
-
     // var matches = jsonData.filter(el => el.target.jsonData.name === str);
-
-
-
-
-
-
 }));
-
-
 
 

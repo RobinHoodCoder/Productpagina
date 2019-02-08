@@ -17,7 +17,6 @@
     <!--<script src="assets/vendors/vendorsjs.min.js"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
-
         WebFont.load({
             google: {
                 families: ['Oswald', 'Roboto Condensed']
@@ -26,6 +25,7 @@
     </script>
 </head>
 <body>
+<div class="overlay"></div>
 <header>
     <div class="wrapper">
         <nav>
@@ -60,10 +60,10 @@
         </ul>
     </div>
 </div>
-<main class="product-detail">
+<main class="product-detail product__container" data-product="1001">
     <div class="wrapper">
-        <h1>APPLE IMAC 27 inch 3.3GHZ RETINA 5K</h1>
-        <div class="main-cols">
+        <h1 class="product__name">APPLE IMAC 27 inch 3.3GHZ RETINA 5K</h1>
+        <section class="main-cols">
             <div class="col col-product-detail-images">
                 <div class="content-box" >
                     <div class="lightbox">
@@ -94,7 +94,7 @@
                         <div class="swiper-container gallery-thumbs">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img src="assets/images/product-images/thumb/1001-apple-imac-27-inch.jpg"
+                                    <img class="product__main-thumb" src="assets/images/product-images/thumb/1001-apple-imac-27-inch.jpg"
                                          alt="APPLE IMAC 27 inch 3.3GHZ RETINA 5K">
                                 </div>
                                 <div class="swiper-slide">
@@ -105,6 +105,7 @@
                                     <img src="assets/images/product-images/thumb/1001-apple-imac-27-inch-back.jpg"
                                          alt="APPLE IMAC 27 inch 3.3GHZ RETINA 5K">
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -114,8 +115,8 @@
                 <div class="content-box">
                     <div class="price-box">
                         <div class="prices left-floated">
-                            <span class="price initial-price">499,-</span>
-                            <span class="price special-price">399,-</span>
+                            <span class="price initial-price product__price-initial">499,-</span>
+                            <span class="price special-price product__price-special" data-price="399">399,-</span>
                         </div>
                         <div class="delivery-usp available left-floated">
                             <img src="/assets/images/icons/check-circle.svg" alt="check icon">
@@ -123,7 +124,7 @@
                         </div>
                         <div class="cleared"></div>
                     </div>
-                    <button class="purchase-button">In mijn winkelwagentje</button>
+                    <button data-action="ADD_PRODUCT_TO_CART" class="purchase-button">In mijn winkelwagentje</button>
                     <span class="status-message warning">Nog 8 op voorraad!</span>
                     <div class="usps-box">
                         <ul class="usp-list">
@@ -235,9 +236,20 @@
                     </article>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 </main>
+<div class="shopping-cart-container">
+    <div class="wrapper">
+        <div class="shopping-cart-header">
+            <h2>Product toegevoegd aan winkelwagen</h2>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="cart-items"></div>
+    </div>
+</div>
+
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 

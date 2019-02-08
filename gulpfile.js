@@ -99,10 +99,12 @@ function scriptsLint() {
         // .pipe(eslint.failAfterError());
 }
 function scripts() {
-    return src(['./src/assets/js/**/*'])
+    return src(['./src/assets/js/**/*.js'])
+        .pipe(sourcemaps.init())
         .pipe(plumber())
-        .pipe(webpackstream(webpackconfig, webpack))
+        // .pipe(webpackstream(webpackconfig, webpack))
         .pipe(concat('scripts.min.js'))
+        .pipe(sourcemaps.write('./build/assets/js'))
         .pipe(dest('./build/assets/js'))
         .pipe(browsersync.stream())
 }
