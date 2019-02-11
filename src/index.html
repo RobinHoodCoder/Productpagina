@@ -32,7 +32,15 @@
             <ul>
                 <li class="logo"><a href="#"><img src="assets/images/pc-master-store-logo-w.svg"></a></li>
                 <li class="login-btn"><a href="#">Inloggen</a></li>
-                <li class="shopping-cart"><a href="#"><img src="assets/images/icons/shopping-cart.svg"></a></li>
+                <li class="shopping-cart">
+                    <a class="open-cart" href="#">
+                        <img src="assets/images/icons/shopping-cart.svg">
+                        <div class="cart-amount">
+                            <span class="cart-items-amount">
+                            </span>
+                        </div>
+                    </a>
+                </li>
                 <div class="cleared"></div>
             </ul>
         </nav>
@@ -124,7 +132,7 @@
                         </div>
                         <div class="cleared"></div>
                     </div>
-                    <button data-action="ADD_PRODUCT_TO_CART" class="purchase-button">In mijn winkelwagentje</button>
+                    <button data-action="ADD_PRODUCT_TO_CART" class="button-purchase btn-large">In mijn winkelwagentje</button>
                     <span class="status-message warning">Nog 8 op voorraad!</span>
                     <div class="usps-box">
                         <ul class="usp-list">
@@ -242,7 +250,7 @@
 <div class="shopping-cart-container">
     <div class="wrapper">
         <div class="shopping-cart-header">
-            <h2>Product toegevoegd aan winkelwagen</h2>
+            <h2>Producten in uw winkelwagentje</h2>
         </div>
     </div>
     <div class="wrapper">

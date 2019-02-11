@@ -5,7 +5,7 @@ header{
 nav{
 
   box-sizing: border-box;
-  font-size: 1.3em;
+
   padding: 10px 0;
   .logo{
     img{
@@ -26,6 +26,7 @@ nav{
       list-style: none;
       a{
         color: #fff;
+        font-size: 1.3em;
       }
     }
     .login-btn{
@@ -34,6 +35,39 @@ nav{
     }
     .shopping-cart{
       margin: 0;
+      position: relative;
+      a{
+        display: inline-block;
+      }
+      .cart-amount{
+        position: absolute;
+        font-size: 0.8em;
+        right:-5px;
+        left: auto;
+        top:-5px;
+        bottom:auto;
+        display: inline-block;
+        color: @theme-color-dark;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        &.contains-items{
+          background: @orange;
+          &.animate{
+            animation: 1s sticker 1s ease-in-out;
+          }
+        }
+        span{
+          left:0;
+          right:0;
+          display: inline-block;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
     }
   }
 }

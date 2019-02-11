@@ -1,3 +1,142 @@
 button:hover {
     cursor: pointer;
+    opacity: 0.9;
+}
+a,button{
+    &:hover,&:active,&:focus{
+        outline:0;
+    }
+}
+button{
+    transition: all .2s ease-in-out;
+}
+.btn-large(@bgcolor : @theme-color-main, @fgcolor: @font-color-base){
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 1.6em;
+    width: 100%;
+    padding: 25px 10px;
+    background: @bgcolor;
+    color: @fgcolor;
+}
+.btn-basic(@bgcolor :@border-color ,@fgcolor: @font-color-base){
+    font-size: 1.2em;
+    padding:20px;
+    border-radius: 10px;
+    &:not(.btn-outline){
+        background: @bgcolor;
+        color: @fgcolor;
+        &:hover{
+            background: darken(@bgcolor,5%);
+        }
+    }
+}
+.btn-small(@bgcolor :@border-color ,@fgcolor: @font-color-base){
+    font-size: 1em;
+    padding:10px;
+    border-radius: 10px;
+    &:not(.btn-outline){
+        background: @bgcolor;
+        color: @fgcolor;
+    }
+}
+
+.btn-outline(@color){
+    border: 1px solid @color;
+    color: @color;
+    background: none;
+}
+
+
+.btn-mini(@bgcolor,@fgcolor){
+    border-radius: 7px;
+    background: @bgcolor;
+    color: @fgcolor;
+    display: inline-block;
+    font-size: 1.4em;
+
+}
+.btn-clicky(@depth,@color){
+    box-shadow: 0 @depth 0 0 @color;
+    &:active{
+        transform: translateY(@depth);
+        box-shadow: none;
+    }
+}
+.btn-icon(@url){
+    position: relative;
+    padding: 10px 10px 10px 35px;
+    &:before{
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        display: inline-block;
+        left:10px;
+        width: 22px;
+        height: 24px;
+        content: url(@url);
+    }
+}
+.button-purchase{
+    &:hover{
+        opacity: 0.9;
+    }
+    .btn-large(@green-bright,#fff);
+    .btn-clicky(4px,darken(@green-bright,7%));
+    &.added-to-cart{
+        .btn-large(@green-normal,#fff);
+        .btn-clicky(4px,darken(@green-normal,10%));
+        &:before{
+            transform: translateY(-2px);
+            display: inline-block;
+            content: url("../images/icons/check-white-1.svg");
+            margin-right: 10px;
+        }
+    }
+}
+
+.button-to-checkout{
+    .btn-basic(@green-normal,#fff);
+}
+.button-continue-shopping{
+    .btn-basic();
+    .btn-outline(@font-color-light);
+}
+.button-clear-items{
+    .btn-small();
+    .btn-outline(@red);
+    .btn-icon("../images/icons/trash.svg");
+    margin-bottom: 10px;
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+.cart-footer{
+    position: relative;
+    padding: 30px 0;
+    .order-progress-navigation{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.cart__item__increase, .cart__item__decrease{
+    .btn-mini(@theme-color-main,#fff);
+    .btn-clicky(3px,darken(@theme-color-main,20%));
+}
+.cart__item__decrease.decrease-last{
+    .btn-mini(@border-color,#fff);
+    .btn-clicky(3px,darken(@border-color,20%));
+    pointer-events: none;
+    box-shadow: 0 3px 0 0 darken(@border-color,15%);
+}
+
+.cart__item__delete{
+    .btn-mini(@red,#fff);
+    .btn-clicky(3px, darken(@red,10%));
+}
+span.cart__item__quantity{
+    display: inline-block;
+    transform: translateY(-2px);
+    margin: 0 5px;
 }

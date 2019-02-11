@@ -1,3 +1,7 @@
+.visible{
+  display: block;
+  animation: slide .3s ease-in-out;
+}
 .absolute{position: absolute;margin:auto;}
 main{
   position: relative;
@@ -59,4 +63,42 @@ span.price{
     margin-bottom: 16px;
   }
 }
+.overlay{
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  //width:  calc(~'100% - 20px');
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  &.visible{
+    display: block;
+  }
+}
+.no-items-added{
+  z-index: 999;
+  font-size: 1.1em;
+  line-height: 120%;
+  display: block;
+  position: absolute;
+  top:55px;
+  right:0;
+  background: #fff;
+  padding:10px;
+  border-radius: 10px;
+  border:1px solid @border-color;
+  &:before{
+    content:'';
+    width: 0;
+    height: 0;
+    border-bottom: 5px solid #fff;
+    position: absolute;
+    top:-5px;
+    right:0;
 
+  }
+
+}
