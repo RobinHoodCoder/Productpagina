@@ -40,10 +40,6 @@ $(function () {
     //Variable om totaal aantal producten te tellen in winkelwagentje
     let totalItems = 0;
 
-
-
-
-
     //Chck of er producten in de winkelwagen zitten. Zo ja, zet elk product één voor één de winkelwagen popup DOM.
     //Tel het aantal producten op en bereken de prijs.
     //Koppel de juiste buttons aan het juiste product
