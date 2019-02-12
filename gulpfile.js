@@ -13,7 +13,7 @@ const mainBowerFiles = require('main-bower-files');
 const postcss = require("gulp-postcss");
 const flatten = require("gulp-flatten");
 
-const autoprefixer = require('autoprefixer')
+const autoprefixer = require('autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const less = require('gulp-less');
 const browsersync = require("browser-sync").create();
@@ -53,13 +53,14 @@ function browserSyncReload(done) {
     done();
 }
 
-function injecthtml(){
+function injectLinksToHTML(){
     const htmltarget = ('./src/index.html');
     return src(htmltarget)
         .pipe(inject(
             src([
-                './build/assets/vendors/**/*.js',
                 './build/assets/vendors/**/*.css',
+                './build/assets/css/**/*.css',
+                './build/assets/vendors/**/*.js',
                 './build/assets/js/**/*.js'
             ],
                 {
@@ -70,10 +71,11 @@ function injecthtml(){
                 addRootSlash: true
                 }
 
-        )) // This will always inject vendor files before app files
+        ))
         .pipe(dest('src/'));
 }
 
+//Kopieer all main bower files vanuit components (alleen buildfiles)
 function updatevendors(){
     return src(mainBowerFiles(), { base: './components/' })
         .pipe(plumber(function (err) {
@@ -83,7 +85,7 @@ function updatevendors(){
         .pipe(gulp.dest('./src/assets/vendors'))
 }
 
-//Copy html to build map
+//Copy html naar build map
 function htmldest() {
     return src("./src/**/*.html")
         .pipe(htmlmin({ collapseWhitespace: true }))
@@ -96,8 +98,10 @@ function scriptsLint() {
         .pipe(plumber())
         .pipe(eslint())
         .pipe(eslint.format())
-        // .pipe(eslint.failAfterError());
+        // .pipe(eslint.failAfterError()); //=== Verander deze als je js niet wilt processen als er errors zijn
 }
+
+//Zet alle scripts bij elkaar met sourcemap
 function scripts() {
     return src(['./src/assets/js/**/*.js'])
         .pipe(sourcemaps.init())
@@ -110,7 +114,7 @@ function scripts() {
 }
 
 
-
+//Zet alle less files bij elkaar en exporteer naar css in build
 function css() {
     return src('src/assets/styles/*.less')
         .pipe(sourcemaps.init())
@@ -135,24 +139,20 @@ function vendorjs(){
         .pipe(uglify())
         .pipe(concat('vendorsjs.min.js'))
         .pipe(dest('build/assets/vendors', { sourcemaps: true }))
-};
-
-// gulp.task(vendorjs);
-
+}
+// Gooi alle vendorscss uit bower plugins bij elkaar en zet ze in het build mapje
 function vendorcss(){
     return src(['src/assets/vendors/**/*.css'])
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(concat('vendorscss.min.css'))
         .pipe(dest('build/assets/vendors', { sourcemaps: true }))
-};
-
+}
+// Schoon alles op in assets (voor build)
 function clean() {
     return del(["./build/assets/**/*"]);
 }
 
-
-
-// Optimize Images
+// Optimize alle afbeeldingen in image folder en kopieer naar build
 function images() {
     return gulp
         .src("src/assets/images/**")
@@ -173,9 +173,12 @@ function images() {
         )
         .pipe(gulp.dest("./build/assets/images/"));
 }
+// Optimize alle afbeeldingen van vendors mapje en kopieer naar build
+// Nu ook met SVG's
 function vendimages() {
     return gulp
-        .src("./src/assets/vendors/**/*.{JPG,jpg,png,gif}")
+        //Pak alleen de afbeeldingen... anders gaat het fout..
+        .src("./src/assets/vendors/**/*.{JPG,jpg,png,gif,svg}")
         .pipe(newer("./build/assets/vendors"))
         .pipe(
             imagemin([
@@ -191,16 +194,15 @@ function vendimages() {
                 })
             ])
         )
+        //Zet alle afbeeldingen in dezelfde root map ipv in de oude vendors folder locatie
         .pipe(flatten())
         .pipe(gulp.dest("./build/assets/vendors/"));
 }
 
-
-
-
+// Bekijk wat er veranderd en voer taken uit
 function watchFiles() {
     gulp.watch("./src/assets/styles/**/*", css);
-    gulp.watch("./src/assets/js/**/*", gulp.series(scriptsLint, scripts)); //geen linter nu
+    gulp.watch("./src/assets/js/**/*", gulp.series(scriptsLint, scripts)); //Controle van alle scripts
     gulp.watch(
         [
             "./src/*.html",
@@ -210,34 +212,33 @@ function watchFiles() {
     gulp.watch("./src/assets/images/**/*", images);
 }
 
-// gulp.task(js);
-// gulp.task(css);
-// gulp.task(images);
 
-
-//Desfine complex tasks
+//Combineer complexe taken
 const vendors = series(updatevendors,parallel(vendorcss, vendorjs, vendimages));
-
 const js = series(scriptsLint, scripts);
 
 //const build = gulp.series(clean, gulp.parallel(css, images, scripts)); -- original
 const build = series(clean, parallel(css, images, scripts, vendorcss, vendorjs, vendimages)); // -- custom
 const watch = parallel(watchFiles, browserSync);
 
-// Copy all js and html files, then inject paths to src html file, then copy src html to dist folder
-const html =  series(clean,updatevendors,parallel(vendorcss,vendorjs,css,scripts,vendimages, images, series(injecthtml,htmldest)));
+// Kopieër alle js & html files, then inject paths to src html file, then copy src html to dist folder
+//Schoon assets op. Update alle vendor files vanuit components mapje. Combineer en process daarna alle vendor files.
+//Tegelijkertijd ook alle andere css en afbeeldingen processen
+//Als dit allemaal gedaan is, inject dan de paden van alle css en js files in index.html
+
+const html =  series(clean,updatevendors,parallel(vendorcss,vendorjs,css,scripts,vendimages, images, series(injectLinksToHTML,htmldest)));
 
 
 // export tasks
 exports.vendors = vendors;
 exports.html = html;
 
+exports.injectHTML = injectLinksToHTML;
 exports.images = images;
 exports.vendimages = vendimages;
 exports.css = css;
 exports.js = js;
 
-// Put together and minify / uglify all scripts in vendor folders
 exports.vendorjs = vendorjs;
 
 exports.clean = clean;

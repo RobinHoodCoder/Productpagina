@@ -8,6 +8,14 @@
   z-index: 999;
   color: @font-color-base;
   background: #fff;
+  margin:auto;
+  max-width: 1200px;
+  box-sizing: border-box;
+  padding-bottom: 30px;
+  @media @desktop{
+    padding: 0 30px 30px 30px;
+    border-radius: 0 0 20px 20px;
+  }
   &.visible{
     display: block;
 
@@ -32,10 +40,6 @@
   max-height: 300px;
   overflow-y: auto;
 }
-
-
-
-
 .cart__item{
   position: relative;
   border-bottom: 1px solid @border-color;
@@ -48,24 +52,26 @@
 }
 .cart__item__left{
   float: left;
-  width:50%;
+  width:43%;
   margin-left:10px;
   .cart__item__name{
     margin-bottom: 4px;
   }
 }
-
-
 .cart__item__right{
   position: absolute;
   right:0;
   top:50%;
   transform: translateY(-50%);
   bottom:0;
-  &:before{
+  span:before{
     content: '€ ';
   }
 }
+.cart__item__price-initial{
+  opacity: 0.5;
+  text-decoration: line-through;
+}
 .cart__item--removed{
-  animation: .2s slideOut ease-in-out forwards;
+  animation: .5s slideOut ease-in-out forwards;
 }

@@ -84,21 +84,19 @@ span.price{
   line-height: 120%;
   display: block;
   position: absolute;
-  top:55px;
+  top:0px;
   right:0;
   background: #fff;
   padding:10px;
-  border-radius: 10px;
-  border:1px solid @border-color;
-  &:before{
-    content:'';
-    width: 0;
-    height: 0;
-    border-bottom: 5px solid #fff;
-    position: absolute;
-    top:-5px;
-    right:0;
-
-  }
-
+  width: 100%;
+  text-align: center;
+}
+//Standaard animaties
+.move-in-and-out{
+  transform: translateY(-100%) translateX(0) scale(0.9); opacity: 1;
+  animation: 3s ease-in-out moveInAndOut forwards;
+}
+.move-out-to-top{
+  transform: translateY(0) translateX(0) scale(0); opacity: 1;
+  animation: .5s ease-in-out moveOutToTop forwards;
 }

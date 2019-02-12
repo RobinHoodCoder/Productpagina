@@ -72,13 +72,19 @@ nav{
   }
 }
 .breadcrumbs{
-  margin: 10px 0;
+  margin: 15px 0;
   list-style: none;
   overflow: hidden;
   font-weight: 400;
-  font-size: 1.2em;
+  font-size: 1.1em;
   display: none;
+
+  @media @tablet{
+    display: block;
+    font-size: 1.2em;
+  }
   @media @desktop{
+    display: block;
     font-size: 1.3em;
     //li{display: block}
     li{
@@ -94,18 +100,22 @@ nav{
     float: left;
     list-style: none;
     padding:0;
-    a{
+    span{
+      font-weight: 400;
       display: block;
-      color: black;
+      color: lighten(@theme-color-dark,20%);
       text-decoration: none;
       position: relative;
       display: block;
       float: left;
-      padding: 10px 10px 10px 0;
+      padding: 5px 10px 5px 0;
+    }
+    a{
+      display: block;
       span{
         &:after{
           margin-left: 10px;
-          color: black;
+          color: lighten(@theme-color-dark,20%);
           content: '>';
           display: inline-block;
         }
@@ -121,6 +131,10 @@ nav{
 .shopping-cart{
   img{
     width: 40px;
+    transition: all.2s ease-in-out;
+    &:active{
+      transform: scale(0.9);
+    }
     @media @desktop{
       width: 50px;
     }
