@@ -248,7 +248,7 @@ gulp.task('html:prod', function () {
 });
 
 gulp.task('json:prod', function () {
-    return gulp.src(paths.jso n)
+    return gulp.src(paths.jso; n;)
         .pipe(minifyJson())
         .pipe(gulp.dest(paths.dirs.build));
 });

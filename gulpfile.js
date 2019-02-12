@@ -24,10 +24,13 @@ const newer = require('gulp-newer');
 const plumber = require("gulp-plumber");
 const eslint = require("gulp-eslint");
 const del = require("del");
+/*
+* TODO: flatten js sourcemaps locatie
+* */
 
-const webpack = require("webpack");
-const webpackconfig = require("./webpack.config.js");
-const webpackstream = require("webpack-stream");
+// const webpack = require("webpack");
+// const webpackconfig = require("./webpack.config.js");
+// const webpackstream = require("webpack-stream");
 
 
 // function html() {
@@ -108,7 +111,7 @@ function scripts() {
         .pipe(plumber())
         // .pipe(webpackstream(webpackconfig, webpack))
         .pipe(concat('scripts.min.js'))
-        .pipe(sourcemaps.write('./build/assets/js'))
+        .pipe(sourcemaps.write('.'))
         .pipe(dest('./build/assets/js'))
         .pipe(browsersync.stream())
 }
@@ -120,7 +123,7 @@ function css() {
         .pipe(sourcemaps.init())
         .pipe(plumber())
         .pipe(less())
-        // .pipe(postcss([autoprefixer(), cssnano()])) -- zet deze om in build
+        // .pipe(postcss([autoprefixer(), cssnano()])) -- Minify en autoprefixer. Zet deze om voor productie
         .pipe(sourcemaps.write())
         .pipe(dest('build/assets/css'))
         .pipe(browsersync.stream());

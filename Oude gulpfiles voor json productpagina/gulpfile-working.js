@@ -16,7 +16,7 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     LessAutoprefix = require('less-plugin-autoprefix'),
     series = require('stream-series'),
-    inject = require('gulp-inject')
+    inject = require('gulp-inject');
     mainBowerFiles = require('main-bower-files'),
     concat = require('gulp-concat'),
     sort = require('gulp-sort'),
@@ -26,7 +26,7 @@ const babel = require('gulp-babel');
 
 handlebars({
     handlebars: require('handlebars')
-})
+});
 
 var lessAutoprefix = new LessAutoprefix({
     browsers: ['last 2 versions']

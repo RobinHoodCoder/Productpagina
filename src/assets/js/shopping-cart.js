@@ -205,6 +205,7 @@ $(function () {
     * Gecombineerde functies
     * =====================*/
 
+
     //Variable om totaal aantal producten te tellen in winkelwagentje
     let totalItems = 0;
 

@@ -1,7 +1,7 @@
 // --------------------------------------------
 // Dependencies
 // --------------------------------------------
-var autoprefixer = require('gulp-autoprefixer')
+var autoprefixer = require('gulp-autoprefixer');
 var lessAutoprefix = require('less-plugin-autoprefix'),
     concat = require('gulp-concat'),
     del = require('del'),
