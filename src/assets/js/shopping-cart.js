@@ -62,7 +62,7 @@ $(function () {
             element.classList.toggle('visible');
         });
     }
-    function showMessage (message, appendInside, ){
+    function showMessage (message, appendInside){
         let injectHTML = '<span class="no-items-added">'+message+'</span>';
         let conatainerDOM = document.querySelector(appendInside);
 
@@ -103,7 +103,6 @@ $(function () {
             }
         });
     }
-
     function removeItem(product, cartItemDOM, addToCartButtonDOM) {
 
         cartItemDOM.classList.add('cart__item--removed');
@@ -121,7 +120,7 @@ $(function () {
                 smoothRemoveOrHideAll(popupClasses,'move-out-to-top',100,false);
                 // hideOrShowPopup(popupClasses);
                 cartItemsAmountDOM.parentNode.classList.remove('contains-items');
-                cartItemsAmountDOM.innerText = ``;
+                cartItemsAmountDOM.innerText = '';
                 addToCartButtonDOM.classList.remove('added-to-cart');
             },500);
 
@@ -237,7 +236,7 @@ $(function () {
 
         // Als er geen innerText is zijn er geen items in het winkelwagentje. Laat een bericht zien die dit zegt
        if (!cartItemsAmountDOM.innerText){
-           showMessage('Nog geen producten in winkelwagen','header',);
+           showMessage('Nog geen producten in winkelwagen','header');
        }else{
            hideOrShowPopup(popupClasses);
        }
@@ -303,7 +302,6 @@ $(function () {
         let totalItems = 0;
 
         cart.forEach(cartItem => [cartTotal += cartItem.quantity * cartItem.price, totalItems += cartItem.quantity]);
-        console.log(document.querySelector('.cart-items-amount'));
         document.querySelector('[data-action="CHECKOUT"]');
 
 

@@ -24,9 +24,8 @@ const newer = require('gulp-newer');
 const plumber = require("gulp-plumber");
 const eslint = require("gulp-eslint");
 const del = require("del");
-/*
-* TODO: flatten js sourcemaps locatie
-* */
+
+const babel = require('gulp-babel');
 
 // const webpack = require("webpack");
 // const webpackconfig = require("./webpack.config.js");
@@ -85,7 +84,7 @@ function updatevendors(){
             console.log('Bower Task Error');
             console.log(err);
         }))
-        .pipe(gulp.dest('./src/assets/vendors'))
+        .pipe(gulp.dest('./src/assets/vendors'));
 }
 
 //Copy html naar build map
@@ -100,7 +99,7 @@ function scriptsLint() {
     return src(["./src/vendors/**/*","./src/assets/js/**/*", "./gulpfile.js"])
         .pipe(plumber())
         .pipe(eslint())
-        .pipe(eslint.format())
+        .pipe(eslint.format());
         // .pipe(eslint.failAfterError()); //=== Verander deze als je js niet wilt processen als er errors zijn
 }
 
@@ -109,11 +108,18 @@ function scripts() {
     return src(['./src/assets/js/**/*.js'])
         .pipe(sourcemaps.init())
         .pipe(plumber())
-        // .pipe(webpackstream(webpackconfig, webpack))
+        .pipe(babel({
+            presets: ['@babel/preset-env'],
+            plugins: [
+                ["@babel/plugin-transform-arrow-functions", { "spec": true }]
+            ]
+        }))
+        // .pipe(webpackstream(webpackconfig, webpack)) //Webpack is voor in de toekomst...
         .pipe(concat('scripts.min.js'))
+        .pipe(uglify()) //Zet deze uit voor sneller compilen
         .pipe(sourcemaps.write('.'))
         .pipe(dest('./build/assets/js'))
-        .pipe(browsersync.stream())
+        .pipe(browsersync.stream());
 }
 
 
@@ -123,7 +129,7 @@ function css() {
         .pipe(sourcemaps.init())
         .pipe(plumber())
         .pipe(less())
-        // .pipe(postcss([autoprefixer(), cssnano()])) -- Minify en autoprefixer. Zet deze om voor productie
+        .pipe(postcss([autoprefixer(), cssnano()])) //Minify en autoprefixer. Zet deze om voor productie
         .pipe(sourcemaps.write())
         .pipe(dest('build/assets/css'))
         .pipe(browsersync.stream());
@@ -141,14 +147,14 @@ function vendorjs(){
     ],{ sourcemaps: true })
         .pipe(uglify())
         .pipe(concat('vendorsjs.min.js'))
-        .pipe(dest('build/assets/vendors', { sourcemaps: true }))
+        .pipe(dest('build/assets/vendors', { sourcemaps: true }));
 }
 // Gooi alle vendorscss uit bower plugins bij elkaar en zet ze in het build mapje
 function vendorcss(){
     return src(['src/assets/vendors/**/*.css'])
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(concat('vendorscss.min.css'))
-        .pipe(dest('build/assets/vendors', { sourcemaps: true }))
+        .pipe(dest('build/assets/vendors', { sourcemaps: true }));
 }
 // Schoon alles op in assets (voor build)
 function clean() {

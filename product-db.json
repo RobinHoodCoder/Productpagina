@@ -1,0 +1,368 @@
+{ "products" :
+  {
+    "1001": {
+      "sku": "XP-1001",
+      "name": "APPLE IMAC 27 inch 3.3GHZ RETINA 5K",
+      "price": 2499.00,
+      "special_price": 2299.00,
+      "brand": "Apple",
+      "color": "Wit",
+      "type": "Hardware",
+      "qty": "3",
+      "status": "Op voorraad",
+      "description": "<p><span>De Apple iMac 27 inch 3.3 GHZ Retina 5K heeft zo'n scherp beeldscherm, dat je werkelijk alles tot in de kleinste details ziet. In combinatie met het IPS paneel heb je vanuit elke hoek een kristalhelder beeld. Dat komt goed van pas als je graag professioneel foto's en video's bewerkt. Of juist een meeslepende film bekijkt. Wat je ook wilt zien op het scherm, je hebt je favoriete content in een oogwenk bij de hand met de FusionDrive. Maar dat zijn niet de enige eigenschappen die deze iMac bijzonder maken. Ook aan connectiviteit geen gebrek met deze iMac. Met 4 usb 3.0 poorten, Bluetooth 4.0 en WiFi AC heeft deze computer alle verbindingen aan boord.</span></p>",
+      "meta_title": "APPLE IMAC 27 inch 3.3GHZ RETINA 5K",
+      "meta_description": "APPLE IMAC 27 inch 3.3GHZ RETINA 5K De Apple iMac 27 inch 3.3 GHZ Retina 5K heeft zo'n scherp beeldscherm, dat je werkelijk alles tot in de kleinste details ziet. In combinatie met het IPS paneel heb je vanuit elke hoek een kristalhelder beeld. Dat komt goed van",
+      "images": [
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/4/5/452946.jpg",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/4/5/452946.jpg",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/4/5/452946.jpg"
+        },
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/1/9/195615.jpg",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/1/9/195615.jpg",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/1/9/195615.jpg"
+        },
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/4/5/452984.jpg",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/4/5/452984.jpg",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/4/5/452984.jpg"
+        }
+      ],
+      "related": ["1002","1007","1010","1014"]
+    },
+    "1002": {
+      "sku": "XP-1002",
+      "name": "APPLE IMAC 21,5 inch 3.1GHZ RETINA 4K",
+      "price": 1699.00,
+      "special_price": 1599.00,
+      "brand": "Apple",
+      "color": "Wit",
+      "type": "Hardware",
+      "qty": "5",
+      "status": "Op voorraad",
+      "description": "<p><span>De Apple iMac 21,5 inch toont jou de definitie van kleur; het 21,5 inch Retina 4K beeldscherm met IPS techniek laat je alle kleuren nog intenser beleven Ã©n geeft een haarscherp beeld. Of je nu graag professioneel foto's en video's bewerkt of je dagelijkse administratie bijwerkt, met deze all-in-one zie je precies waar je mee bezig bent. De Intel Core i5 processor voert alle taken in combinatie met het ruime werkgeheugen razendsnel uit. Ook aan connectiviteit geen gebrek met deze iMac. Achter de bijzonder dunne behuizing vind je 4 usb 3.0 poorten, 2 thunderbolt poorten en een geheugenkaartsleuf.</span></p>",
+      "meta_title": "APPLE IMAC 21,5 inch 3.1GHZ RETINA 4K",
+      "meta_description": "APPLE IMAC 21,5 inch 3.1GHZ RETINA 4K De Apple iMac 21,5 inch toont jou de definitie van kleur; het 21,5 inch Retina 4K beeldscherm met IPS techniek laat je alle kleuren nog intenser beleven en geeft een haarscherp beeld.",
+      "images": [
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/4/5/453741.png",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/4/5/453741.png",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/4/5/453741.png"
+        },
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/1/9/195609.jpg",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/1/9/195609.jpg",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/1/9/195609.jpg"
+        },
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/4/5/454728.png",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/4/5/454728.png",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/4/5/454728.png"
+        }
+      ],
+      "related": ["1001","1007","1010","1014"]
+    },
+    "1003": {
+      "sku": "XP-1003",
+      "name": "APPLE MACBOOK 12 inch 256 GB-Space gray",
+      "price": 1399.00,
+      "special_price": 1299.00,
+      "brand": "Apple",
+      "color": "Grijs",
+      "type": "Hardware",
+      "qty": "2",
+      "status": "Op voorraad",
+      "description": "<p>Met zijn 920 gram is de 12 inch MacBook de lichtste laptop die Apple ooit heeft gemaakt. En zo'n vlieggewicht neem je natuurlijk makkelijk mee in de trein, naar je volgende les of die belangrijke vergadering. Zo maak je overal je dagelijkse rondje langs je favoriete websites en geniet je van de nieuwste series op het scherpe Retina beeldscherm. Even geen stopcontact in de buurt? Dat is niet meteen een ramp. Je surft tot 10 uur over het web op een volle accu. Wij adviseren de 12 inch MacBook voor:</p>",
+      "meta_title": "APPLE MACBOOK 12 inch 256 GB SPACE GRAY",
+      "meta_description": "APPLE MACBOOK 12 inch 256 GB SPACE GRAY Met zijn 920 gram is de 12 inch MacBook de lichtste laptop die Apple ooit heeft gemaakt. En zo'n vlieggewicht neem je natuurlijk makkelijk mee in de trein, naar je volgende les of die belangrijke vergadering.",
+      "images": [
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/5/0/509404.png",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/5/0/509404.png",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/5/0/509404.png"
+        },
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/5/0/509405.png",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/5/0/509405.png",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/5/0/509405.png"
+        },
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/5/0/509406.png",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/5/0/509406.png",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/5/0/509406.png"
+        }
+      ],
+      "related": ["1007","1010","1011","1014"]
+    },
+    "1004": {
+      "sku": "XP-1004",
+      "name": "Acer laptop: Aspire R3-131T-C6TA",
+      "price": 269.00,
+      "special_price": 249.00,
+      "brand": "Acer",
+      "color": "Blauw",
+      "type": "Hardware",
+      "qty": "8",
+      "status": "Op voorraad",
+      "description": "<p><span>Overal gebruiksvriendelijk</span><br />De Aspire R 11 is een compacte convertible notebook die in elke omgeving kan worden gebruikt. Of u nu thuis bent of in een overvolle metro zit tijdens de spits, u kunt kiezen uit vier verschillende modi: notebook, display, tent of pad. Zo kunt u de notebook overal comfortabel gebruiken.<br /><br /><span>360&deg; draaien</span><br />Dankzij het 360&deg; draaibare scharnier met twee weerstandsniveaus, kunt u het scherm helemaal rond draaien en in elke stand daartussen zetten. De overgangen tussen de vier modi zijn vloeiend, terwijl het scherm volkomen stabiel blijft voor een soepele touchbediening.<br /><br /><span>Zorgeloze mobiliteit</span><br />De Aspire R 11 is ontworpen voor gemoedsrust onderweg. Het scherm heeft kras- en barstbestendig Corning&reg; Gorilla&reg; Glas, zodat u zich geen zorgen hoeft te maken over krassen of andere beschadigingen. En met een maximale gebruiksduur van 8 uur hebt u voldoende vermogen voor de hele reis.<br /><br /><span>Plezier onderweg</span><br />Geniet van de functies waarmee u onderweg nog meer plezier beleeft aan entertainment. U profiteert onder andere van Zero Air Gap, een schermtechnologie waarmee het contrast en de helderheid van de beelden wordt verbeterd, zelfs bij zonlicht. Met Acer TrueHarmony geniet u van een voller en helderder geluid, terwijl de auto-reversing luidsprekers het geluid optimaliseren voor elke modus.<br /><br /><span>Slimme functies</span><br />De Aspire R 11 is voorzien van Acer BluelightShield&trade;, waardoor uw ogen minder snel vermoeid raken. Met Acer Touch Tools kunt u in een handomdraai vastleggen en delen wat er op uw scherm gebeurt, terwijl u met het Precision Touchpad vloeiender kunt zoomen en scrollen.</p>",
+      "meta_title": "Acer laptop: Aspire R3-131T-C6TA",
+      "meta_description": "",
+      "images": [
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/1/3/1349907913_notebooks-laptops-acer-r3-131t-c6ta-nxg10eh019.jpg",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/1/3/1349907913_notebooks-laptops-acer-r3-131t-c6ta-nxg10eh019.jpg",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/1/3/1349907913_notebooks-laptops-acer-r3-131t-c6ta-nxg10eh019.jpg"
+        },
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/1/3/1349907913_1825980097_notebooks-laptops-acer-r3-131t-c6ta-nxg10eh019.jpg",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/1/3/1349907913_1825980097_notebooks-laptops-acer-r3-131t-c6ta-nxg10eh019.jpg",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/1/3/1349907913_1825980097_notebooks-laptops-acer-r3-131t-c6ta-nxg10eh019.jpg"
+        }
+      ],
+      "related": ["1008","1009","1011","1012","1013"]
+    },
+    "1005": {
+      "sku": "XP-1005",
+      "name": "Dell monitor: U2414H",
+      "price": 195.00,
+      "special_price": 170.00,
+      "brand": "Dell",
+      "color": "Zwart",
+      "type": "Hardware",
+      "qty": "0",
+      "status": "Niet op voorraad",
+      "description": "<p><span>De dunste schermomlijsting ter wereld</span><br />Bekijk uw werk in het beste licht op de DellTM UltraSharp 24-monitor &ndash; U2414H. Het verfijnde ontwerp wordt afgerond met de verbluffend dunne omlijsting van 6,05mm rond een 23,8-inch Full HD-beeldscherm met een weergaloze beeldkwaliteit.<br />- Deze ongelooflijke helderheid over een ultrabrede kijkhoek van 178 graden gaat gepaard met de mogelijkheid om links en rechts te roteren tot 90 graden, zodat u met meerdere monitoren een opstelling met vrijwel doorlopend beeld kunt maken.<br />- Full HD-resolutie en ultrabrede kijkhoek voor scherpe, heldere weergavekwaliteit vanuit vrijwel elke hoek<br />- De DellTM UltraSharp 24-monitor - U2414H biedt kleuren die in de fabriek nauwkeurig zijn gekalibreerd, en een sRGB-kleurruimte van meer dan 96% voor indrukwekkende kleuren vanaf het eerste gebruik<br />- Geweldige details met maar liefst 16,77 miljoen kleuren en 96% sRGB-weergave.<br /><br /><span>Eenvoudig verstellen en weergeven</span><br />U kunt de Dell UltraSharp 24-monitor - U2414H niet alleen 90 graden rechtsom of linksom roteren voor opstellingen naast of boven elkaar, maar u kunt de monitor ook comfortabel in hoogte verstellen, kantelen en draaien.<br /><br />U vindt altijd de juiste positie met 6,5 graden naar voren of 22 graden naar achteren kantelen en een hoogteverstelling van tot 130 mm. Met de ultrabrede kijkhoek van 178 graden kunt u het scherm gemakkelijk delen met meerdere toeschouwers en heeft iedereen goed beeld.</p>",
+      "meta_title": "Dell monitor: U2414H",
+      "meta_description": "",
+      "images": [
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/1/3/1349400993_monitoren-dell-u2414h-210-adul_1.jpg",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/1/3/1349400993_monitoren-dell-u2414h-210-adul_1.jpg",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/1/3/1349400993_monitoren-dell-u2414h-210-adul_1.jpg"
+        }
+      ],
+      "related": ["1006"]
+    },
+    "1006": {
+      "sku": "XP-1006",
+      "name": "Hp monitor: EliteDisplay E232 - 23 inch Full HD",
+      "price": 166.00,
+      "special_price": 149.00,
+      "brand": "HP",
+      "color": "Zwart",
+      "type": "Hardware",
+      "qty": "8",
+      "status": "Op voorraad",
+      "description": "<p>EliteDisplay E232 23-inch (58.4-cm) monitor</p><p>HP EliteDisplay E232, 58,420 cm (23 inch), 7 ms, 250 cd/m&sup2;, Zwart, 0 - 45&deg;, -5 - 25&deg;</p><p>Werk slim en ontspannen op de HP EliteDisplay E232 23-inch (58,4-cm) monitor met een groot Full-HD IPS-scherm, presentatiekenmerken van Elite-klasse en ergonomische instelmogelijkheden.<br /><br /><span>Maak elk detail zichtbaar</span><br />Voer al uw projecten uit in een scherpe Full-HD resolutie en werk gemakkelijk samen met collega's overal in de kamer dankzij IPS-technologie met inkijkhoeken van 178 graden. Het grote 23-inch (58,4-cm) diagonale scherm biedt voldoende ruimte voor uw geopende applicaties.<br /><br /><span>Handige aansluitmogelijkheden</span><br />&bull;&nbsp;Sluit de pc of het device van uw keuze aan op de HDMI-, DisplayPort-, VGA- of USB-ingang.&nbsp;<br />&bull;&nbsp;Plaats vaak gebruikte apparaten waar ze nodig zijn en gebruik de USB-aansluitingen op het scherm.<br />&bull;&nbsp;Bevestig uw HP Desktop Mini, HP Chromebox of geselecteerde HP Thin Client direct achter het scherm.&nbsp;<br />&bull;&nbsp;Een ge&iuml;ntegreerde voeding en kabelbeheerfuncties zorgen voor een opgeruimde werkplek.<br />&bull;&nbsp;Met de HP Display Assistant-software kunt u het scherm geheel naar eigen wens indelen.<br />&bull;&nbsp;Cre&euml;er een complete oplossing met HP accessoires.&nbsp;<br />&bull;&nbsp;Gebruik de HP luidsprekerbalk voor geluid, de HP arm voor &eacute;&eacute;n monitor als u geen scherm op uw bureau wilt of een HP USB grafische adapter voor configuraties met meer monitoren.&nbsp;<br />&bull;&nbsp;Werk zonder standaard met het voetloze model.</p>",
+      "meta_title": "Hp monitor: EliteDisplay E232 - 23 inch Full HD",
+      "meta_description": "",
+      "images": [
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/1/3/1349532537_1826609729_monitoren-hp-elitedisplay-e232-23-full-hd-m1n98atabb.jpg",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/1/3/1349532537_1826609729_monitoren-hp-elitedisplay-e232-23-full-hd-m1n98atabb.jpg",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/1/3/1349532537_1826609729_monitoren-hp-elitedisplay-e232-23-full-hd-m1n98atabb.jpg"
+        },
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/1/3/1349532537_monitoren-hp-elitedisplay-e232-m1n98atabb.jpg",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/1/3/1349532537_monitoren-hp-elitedisplay-e232-m1n98atabb.jpg",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/1/3/1349532537_monitoren-hp-elitedisplay-e232-m1n98atabb.jpg"
+        }
+      ],
+      "related": ["1005"]
+    },
+    "1007": {
+      "sku": "XP-1007",
+      "name": "Microsoft Office 365 Mac",
+      "price": 229.00,
+      "special_price": 199.00,
+      "brand": "Microsoft",
+      "type": "Software",
+      "qty": "30",
+      "status": "Op voorraad",
+      "description": "<p>Met de licentie Microsoft Office Thuisgebruik en Zelfstandigen NL heb jij de controle over al je bestanden. Je beschikt met dit pakket over de nieuwste versies van Word, Excel, Powerpoint, OneNote en Outlook. Bestanden bewerk je vanaf je computer en benader je online via OneDrive. Je blijft in contact met zowel privÃ©- als zakelijke connecties via het e-mailprogramma Outlook. OneNote gebruik je voor aantekeningen in vergaderingen en met behulp van Excel houd jij gemakkelijk de cijfertjes van je boekhouding in bedwang. Je installeert het pakket op 1 iMac of MacBook. Daardoor is het pakket geschikt voor 1 gebruiker. De licentie is permanent, dus je hoeft niet na te denken over het verlengen van een abonnement.</p><ul><li>Standaard meegeleverd</li><li>Office Word</li><li>Office Excel</li><li>Office Powerpoint</li><li>Office OneNote</li><li>Office Outlook</li></ul>",
+      "meta_title": "Microsoft Office 365 Mac",
+      "meta_description": "Microsoft Office 365 Mac Met de licentie Microsoft Office Thuisgebruik en Zelfstandigen NL heb jij de controle over al je bestanden. Je beschikt met dit pakket over de nieuwste versies van Word, Excel, Powerpoint, OneNote en Outlook.",
+      "images": [
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/o/f/office-mac-1.png",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/o/f/office-mac-1.png",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/o/f/office-mac-1.png"
+        }
+      ],
+      "related": ["1001","1002","1003"]
+    },
+    "1008": {
+      "sku": "XP-1008",
+      "name": "Microsoft Office 365 Windows",
+      "price": 219.00,
+      "special_price": 199.00,
+      "brand": "Microsoft",
+      "type": "Software",
+      "qty": "25",
+      "status": "Op voorraad",
+      "description": "<p>Kies voor een complete werkplek met de licentie Microsoft office Thuisgebruik en Zelfstandigen NL. Met dit pakket beschik je over de nieuwste versies van Word, Excel, Powerpoint, OneNote en Outlook. Bewerk bestanden vanaf je computer, of benader ze online via OneDrive. De licentie installeer je op 1 computer of laptop. Daardoor is dit pakket geschikt voor 1 gebruiker. Met jouw zelfgemaakte presentatie in Powerpoint houd je je publiek geboeid. In Excel houd bijvoorbeeld overzicht in je boekhouding en met OneNote maak je aantekeningen tijdens vergaderingen. Dit pakket is tot slot voorzien van Outlook. Met dit programma voor e-mailverkeer onderhoud je gemakkelijk je privÃ©- en zakelijke contacten.</p><p><strong>Let op</strong>: Dit is een productcode kaart zonder meegeleverde dvd met software. De software is gratis van Microsoft te downloaden. De productcode is een licentie voor 1 computer of laptop.</p>",
+      "meta_title": "Microsoft Office 365 Windows",
+      "meta_description": "Microsoft Office 365 Windows Kies voor een complete werkplek met de licentie Microsoft office Thuisgebruik en Zelfstandigen NL. Met dit pakket beschik je over de nieuwste versies van Word, Excel, Powerpoint, OneNote en Outlook.",
+      "images": [
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/o/f/office-mac-2_1.png",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/o/f/office-mac-2_1.png",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/o/f/office-mac-2_1.png"
+        }
+      ],
+      "related": ["1004"]
+    },
+    "1009": {
+      "sku": "XP-1009",
+      "name": "Laptop muis",
+      "price": 14.95,
+      "brand": "Microsoft",
+      "color": "Zwart",
+      "type": "Hardware",
+      "qty": "12",
+      "status": "Op voorraad",
+      "description": "<p>De Microsoft Wireless Mobile Mouse 3500 is zeer compact, draadloos en geschikt voor zowel links- als rechtshandige gebruikers. Dankzij Plug & Play kun je de muis op ieder systeem gebruiken zonder eerst iets te moeten installeren. Maak verbinding met de meegeleverde usb nano-ontvanger. De ontvanger kan onderweg aangesloten blijven op je laptop of kan worden opgeborgen in de muis. Door de 2.4 GHz frequentie heb je geen last van storing of ruis met andere draadloze apparatuur.</p><p>Standaard meegeleverd</p><ul><li>Microsoft Wireless Mobile Mouse 3500</li><li>USB nano ontvanger</li><li>AA batterij</li></ul>",
+      "meta_title": "Laptop muis",
+      "meta_description": "Laptop muis De Microsoft Wireless Mobile Mouse 3500 is zeer compact, draadloos en geschikt voor zowel links- als rechtshandige gebruikers. Dankzij Plug & Play kun je de muis op ieder systeem gebruiken zonder eerst iets te moeten installeren. Maak verb",
+      "images": [
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/l/a/laptopmuis-1.jpg",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/l/a/laptopmuis-1.jpg",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/l/a/laptopmuis-1.jpg"
+        },
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/l/a/laptopmuis-2.jpg",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/l/a/laptopmuis-2.jpg",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/l/a/laptopmuis-2.jpg"
+        }
+      ],
+      "related": ["1001","1002","1003","1004"]
+    },
+    "1010": {
+      "sku": "XP-1010",
+      "name": "Apple Magic Mouse 2",
+      "price": 84.00,
+      "brand": "Apple",
+      "color": "Wit",
+      "type": "Hardware",
+      "qty": "1",
+      "status": "Op voorraad",
+      "description": "<p>Met Apple Magic Mouse 2 swipe je door webpagina's, scroll je door teksten en navigeer je met gemak naar je bestanden. Dankzij het gladde, multi-touch-oppervlak bedien je deze muis net zoals je smartphone. Wie toch liever op een traditionele manier wilt klikken gebruikt gewoon de Ã©Ã©n- of tweeknopsbediening. Het lasertrackingsmechanisme combineert optische technologie met de precisie van een laser. Apple Magic Mouse 2 werkt dus probleemloos op elke ondergrond. En dankzij de draadloze Bluetooth verbinding is een wirwar aan kabels verleden tijd. Tel daar een oplaadbare accu bij op en je hebt een muis waar je jarenlang profijt van hebt.</p><p>Geschikt voor Mac met Bluetooth en OS X versie 10.11 of hoger.<br /><strong>Let op</strong>: bij deze muis wordt enkel een usb a kabel meegeleverd. Wil je Magic Mouse aansluiten op MacBook (vanaf 2015) of MacBook Pro (vanaf 2016)? Dan heb je ook nog een usb c converter nodig.</p>",
+      "meta_title": "Apple Magic Mouse 2",
+      "meta_description": "Apple Magic Mouse 2 Met Apple Magic Mouse 2 swipe je door webpagina's, scroll je door teksten en navigeer je met gemak naar je bestanden. Dankzij het gladde, multi-touch-oppervlak bedien je deze muis net zoals je smartphone. Wie toch liever op een traditi",
+      "images": [
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/m/a/macmuis-1.jpg",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/m/a/macmuis-1.jpg",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/m/a/macmuis-1.jpg"
+        },
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/m/a/macmuis-3.jpg",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/m/a/macmuis-3.jpg",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/m/a/macmuis-3.jpg"
+        },
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/m/a/macmuis-2.jpg",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/m/a/macmuis-2.jpg",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/m/a/macmuis-2.jpg"
+        }
+      ],
+      "related": ["1001","1002","1003"]
+    },
+    "1011": {
+      "sku": "XP-1011",
+      "name": "Case Logic Laptoptas 15,6",
+      "price": 39.95,
+      "brand": "Case Logic",
+      "color": "Zwart",
+      "qty": "10",
+      "status": "Op voorraad",
+      "description": "<p><span>De Case Logic Laptoptas 15,6 inch VNCi-215 is een tas met een zakelijke uitstraling en biedt extra bescherming voor je laptop. Het laptopcompartiment is voorzien van voering rondom je laptop. Zo voorkom je een deuk of krassen. Je accessoires passen ook in de Case Logic Laptoptas VNCi-215. Je lader, muis, hardeschijf en overige accessoires berg je namelijk op in de daarvoor bestemde compartimenten. Aan ruimte en protectie is er geen tekort. Deze tas is geschikt voor dagelijks gebruik, zonder de zorgen of je laptop beschadiging oploopt.</span></p>",
+      "meta_title": "Case Logic Laptoptas 15,6",
+      "meta_description": "Case Logic Laptoptas 15,6 De Case Logic Laptoptas 15,6 inch VNCi-215 is een tas met een zakelijke uitstraling en biedt extra bescherming voor je laptop. Het laptopcompartiment is voorzien van voering rondom je laptop. Zo voorkom je een deuk of krassen. Je",
+      "images": [
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/l/a/laptoptas-1.jpg",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/l/a/laptoptas-1.jpg",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/l/a/laptoptas-1.jpg"
+        },
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/l/a/laptoptas-3.jpg",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/l/a/laptoptas-3.jpg",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/l/a/laptoptas-3.jpg"
+        },
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/l/a/laptoptas-2.jpg",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/l/a/laptoptas-2.jpg",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/l/a/laptoptas-2.jpg"
+        }
+      ],
+      "related": ["1003","1004"]
+    },
+    "1012": {
+      "sku": "XP-1012",
+      "name": "Norton Security Standard",
+      "price": 39.95,
+      "brand": "Norton",
+      "type": "Software",
+      "qty": "22",
+      "status": "Op voorraad",
+      "description": "<p>Bescherm je pc of laptop tegen virussen, spyware, Malware, Phishing, hackers en andere bedreigingen met het Norton Security Standaard 3.0 pakket. Daarnaast bescherm je jouw identiteitsgegevens en internet transacties met de Identity Safe functie. Zo shop je veilig op het internet en betaal je eenvoudig je rekeningen.</p><p>Let op! Dit product bevat een licentiecode, geen dvd.</p>",
+      "meta_title": "Norton Security Standard",
+      "meta_description": "Norton Security Standard Bescherm je pc of laptop tegen virussen, spyware, Malware, Phishing, hackers en andere bedreigingen met het Norton Security Standaard 3.0 pakket. Daarnaast bescherm je jouw identiteitsgegevens en internet transacties met de Identi",
+      "images": [
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/n/o/norton-1.png",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/n/o/norton-1.png",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/n/o/norton-1.png"
+        }
+      ],
+      "related": ["1001","1002","1003","1004"]
+    },
+    "1013": {
+      "sku": "XP-1013",
+      "name": "Microsoft Windows 10 32/64bit NL",
+      "price": 145.00,
+      "special_price": 129.00,
+      "brand": "Microsoft",
+      "type": "Software",
+      "qty": "21",
+      "status": "Op voorraad",
+      "description": "<p>Windows 10 is de opvolger van het welbekende besturingssysteem Windows 8. Windows 10 bestaat uit een combinatie van de voordelen van Windows 8 en Windows 7. Microsoft heeft goed geluisterd naar de gebruikers waardoor het nieuwe besturingssysteem gebruiksvriendelijker is en over handige nieuwe features beschikt. Zo is het startmenu terug, worden apps niet altijd full screen weergeven, werk je in meerdere bureaubladen, surf je op het web in een 'slimme' nieuwe browser en is het besturingssysteem beschikbaar voor al jouw apparaten.</p><p>Standaard meegeleverd</p><ul><li>Usb-stick met Microsoft Windows 10 32/64bit EN</li></ul>",
+      "meta_title": "Microsoft Windows 10 32/64bit NL",
+      "meta_description": "",
+      "images": [
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/m/i/microsoft-10-2.jpg",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/m/i/microsoft-10-2.jpg",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/m/i/microsoft-10-2.jpg"
+        }
+      ],
+      "related": ["1004"]
+    },
+    "1014": {
+      "sku": "XP-1014",
+      "name": "Filemaker Pro 16 Advanced",
+      "price": 699.00,
+      "brand": "Apple",
+      "type": "Software",
+      "qty": "16",
+      "status": "Op voorraad",
+      "description": "<p>FileMaker Pro Advanced bevat alle functies van FileMaker Pro plus een aantal geavanceerde ontwikkel- en aanpassingstools. Met deze functies kun je sneller en eenvoudiger je eigen apps ontwerpen en ontwikkelen, efficiÃ«nter problemen oplossen en je apps moeiteloos onderhouden.</p>",
+      "meta_title": "Filemaker Pro 16 Advanced",
+      "meta_description": "Filemaker Pro 16 Advanced FileMaker Pro Advanced bevat alle functies van FileMaker Pro plus een aantal geavanceerde ontwikkel- en aanpassingstools. Met deze functies kun je sneller en eenvoudiger je eigen apps ontwerpen en ontwikkelen, efficiÃ«nter problem",
+      "images": [
+        {
+          "base": "https://m2.experiusdemo.nl/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/f/i/filemaker-1.jpg",
+          "image": "https://m2.experiusdemo.nl/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/f/i/filemaker-1.jpg",
+          "thumb": "https://m2.experiusdemo.nl/media/catalog/product/cache/6633e7fcc9a7e88021adbe9a2450a512/f/i/filemaker-1.jpg"
+        }
+      ],
+      "related": ["1001","1002","1003"]
+    }
+  }
+}
+
+Woensdag 15:00 creaticve skills
