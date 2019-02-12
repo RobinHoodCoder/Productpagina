@@ -218,7 +218,11 @@ const vendors = series(updatevendors,parallel(vendorcss, vendorjs, vendimages));
 const js = series(scriptsLint, scripts);
 
 //const build = gulp.series(clean, gulp.parallel(css, images, scripts)); -- original
-const build = series(clean, parallel(css, images, scripts, vendorcss, vendorjs, vendimages)); // -- custom
+// const build = series(clean, parallel(css, images, scripts, vendorcss, vendorjs, vendimages)); // -- custom
+const build = series(clean,updatevendors,parallel(css, images, scripts, vendorcss, vendorjs, vendimages, series(injectLinksToHTML,htmldest))); // -- custom
+
+
+
 const watch = parallel(watchFiles, browserSync);
 
 // Kopieër alle js & html files, then inject paths to src html file, then copy src html to dist folder
