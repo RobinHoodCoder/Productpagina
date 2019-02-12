@@ -70,7 +70,8 @@ function injectLinksToHTML(){
                 }
                 ),{
                 ignorePath: 'build',
-                addRootSlash: true
+                addRootSlash: false,
+                addPrefix: '.'
                 }
 
         ))
