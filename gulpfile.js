@@ -27,6 +27,7 @@ const del = require("del");
 
 const babel = require('gulp-babel');
 
+
 // const webpack = require("webpack");
 // const webpackconfig = require("./webpack.config.js");
 // const webpackstream = require("webpack-stream");
@@ -109,12 +110,15 @@ function scripts() {
     return src(['./src/assets/js/**/*.js'])
         .pipe(sourcemaps.init())
         .pipe(plumber())
-        .pipe(babel({
-            presets: ['@babel/preset-env'],
-            plugins: [
-                ["@babel/plugin-transform-arrow-functions", { "spec": true }]
-            ]
-        }))
+        /*
+        * TODO: Babel werkend voor Internet Explorer
+        * */
+        // .pipe(babel({
+        //     presets: ['minify','@babel/preset-env'],
+        //     plugins: [
+        //         ["@babel/plugin-transform-arrow-functions", { "spec": true },"transform-es2015-for-of"]
+        //     ]
+        // }))
         // .pipe(webpackstream(webpackconfig, webpack)) //Webpack is voor in de toekomst...
         .pipe(concat('scripts.min.js'))
         .pipe(uglify()) //Zet deze uit voor sneller compilen
@@ -122,6 +126,13 @@ function scripts() {
         .pipe(dest('./build/assets/js'))
         .pipe(browsersync.stream());
 }
+// function babelMinify() {
+//     return src("./build/assets/js/scripts.min.js")
+//     .pipe(babel({presets: ['minify','@babel/preset-env']}))
+//     .pipe(gulp.dest("./build/assets/js/min"));
+// }
+// gulp.task(babelMinify);
+
 
 
 //Zet alle less files bij elkaar en exporteer naar css in build
@@ -157,6 +168,15 @@ function vendorcss(){
         .pipe(concat('vendorscss.min.css'))
         .pipe(dest('build/assets/vendors', { sourcemaps: true }));
 }
+
+function miscfiles(){
+    return src([
+        'src/site.webmanifest'
+    ])
+    .pipe(dest('./build', { sourcemaps: true }));
+}
+
+
 // Schoon alles op in assets (voor build)
 function clean() {
     return del(["./build/assets/**/*"]);
@@ -229,7 +249,7 @@ const js = series(scriptsLint, scripts);
 
 //const build = gulp.series(clean, gulp.parallel(css, images, scripts)); -- original
 // const build = series(clean, parallel(css, images, scripts, vendorcss, vendorjs, vendimages)); // -- custom
-const build = series(clean,updatevendors,parallel(css, images, scripts, vendorcss, vendorjs, vendimages, series(injectLinksToHTML,htmldest))); // -- custom
+const build = series(clean,updatevendors,parallel(css, images, scripts, vendorcss, vendorjs, vendimages, series(injectLinksToHTML,htmldest,miscfiles))); // -- custom
 
 
 
@@ -239,13 +259,13 @@ const watch = parallel(watchFiles, browserSync);
 //Schoon assets op. Update alle vendor files vanuit components mapje. Combineer en process daarna alle vendor files.
 //Tegelijkertijd ook alle andere css en afbeeldingen processen
 //Als dit allemaal gedaan is, inject dan de paden van alle css en js files in index.html
-
 const html =  series(clean,updatevendors,parallel(vendorcss,vendorjs,css,scripts,vendimages, images, series(injectLinksToHTML,htmldest)));
 
 
 // export tasks
 exports.vendors = vendors;
 exports.html = html;
+exports.miscfiles = miscfiles;
 
 exports.injectHTML = injectLinksToHTML;
 exports.images = images;

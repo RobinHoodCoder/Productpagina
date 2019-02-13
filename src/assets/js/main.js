@@ -21,8 +21,8 @@
 
     // Photo Gallery
     const $pswp = $(".pswp")[0];
-    const image = [];
 
+    const image = [];
 
     $(".photoswipe-gallery").each( function() {
         var $pic     = $(this),
