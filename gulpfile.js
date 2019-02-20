@@ -113,15 +113,15 @@ function scripts() {
         /*
         * TODO: Babel werkend voor Internet Explorer
         * */
-        // .pipe(babel({
-        //     presets: ['minify','@babel/preset-env'],
-        //     plugins: [
-        //         ["@babel/plugin-transform-arrow-functions", { "spec": true },"transform-es2015-for-of"]
-        //     ]
-        // }))
+        .pipe(babel({
+            presets: ['minify','@babel/preset-env'],
+            plugins: [
+                ["@babel/plugin-transform-arrow-functions"]
+            ]
+        }))
         // .pipe(webpackstream(webpackconfig, webpack)) //Webpack is voor in de toekomst...
         .pipe(concat('scripts.min.js'))
-        .pipe(uglify()) //Zet deze uit voor sneller compilen
+        // .pipe(uglify()) //Zet deze uit voor sneller compilen
         .pipe(sourcemaps.write('.'))
         .pipe(dest('./build/assets/js'))
         .pipe(browsersync.stream());

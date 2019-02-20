@@ -1,13 +1,13 @@
 {
   "name": "gulp-website",
   "version": "1.0.0",
-  "description": "Proudct detail pagina",
+  "description": "Product detail pagina",
   "main": "src/index.js",
   "scripts": {
     "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "RobinHoodCoder",
+  "author": "Robin",
   "license": "ISC",
   "browserslist": [
     "last 2 versions"

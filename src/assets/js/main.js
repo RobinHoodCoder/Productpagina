@@ -19,6 +19,7 @@
         }
     });
 
+
     // Photo Gallery
     const $pswp = $(".pswp")[0];
 
